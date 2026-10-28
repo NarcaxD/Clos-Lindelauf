@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+  VERSION NÉERLANDAISE (NL) — Clos Lindelauf
+  ⚠ Même structure que index.html : quand tu modifies le contenu d'une page, fais pareil sur l'autre.
+  3 fichiers travaillent ensemble :
+    index.html / nl.html → le contenu (FR / NL)
+    style.css            → l'apparence
+    script.js            → les petites interactions (fiches des vins, coffret)
+  Tout ce qui est entre crochets [ ] est encore à remplacer ou à valider avec le vigneron.
+-->
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clos Lindelauf — Natuurwijn uit Hakendover</title>
+  <meta name="description" content="Clos Lindelauf, een duurzame en familiale Belgische wijngaard in Hakendover. Natuurwijnen: Aligoté en Pinot Gris.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Petite icône dans l'onglet du navigateur -->
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+  <!-- EN-TÊTE : posé par-dessus la grande photo d'accueil -->
+  <header class="entete">
+    <a href="#accueil" class="logo">Clos Lindelauf</a>
+    <nav>
+      <a href="#domaine" class="nav-section">Het domein</a>
+      <a href="#vins" class="nav-section">Onze wijnen</a>
+      <a href="#revendeurs" class="nav-section">Verkooppunten</a>
+      <a href="#visite" class="nav-section">Ons vinden</a>
+      <a href="#commande" class="nav-commande">Bestellen</a>
+      <!-- Choix de la langue : la langue active est soulignée (class="actif") -->
+      <span class="langues"><a href="index.html" lang="fr">FR</a> | <a href="nl.html" class="actif" lang="nl">NL</a></span>
+      <a href="https://www.instagram.com/clos_lindelauf/" target="_blank" rel="noopener" aria-label="Instagram" class="icone">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. ACCUEIL : photo plein écran + logo -->
+    <section id="accueil" class="hero">
+      <div class="hero-texte">
+        <!-- Le logo en version blanche, pour ressortir sur la photo sombre -->
+        <h1><img src="images/logo-blanc.png" alt="Clos Lindelauf" class="logo-hero"></h1>
+        <p>Natuurwijn · Hakendover</p>
+      </div>
+      <a href="#philosophie" class="fleche" aria-label="Naar beneden">↓</a>
+    </section>
+
+    <!-- 2. ACCROCHE -->
+    <section class="accroche">
+      <p>Een Belgische wijngaard, duurzaam en familiaal.</p>
+    </section>
+
+    <!-- 3. NOTRE PHILOSOPHIE : 3 valeurs, une icône + une phrase chacune -->
+    <section id="philosophie" class="philosophie">
+      <div class="valeur">
+        <!-- Icône : une goutte (vin naturel) -->
+        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 6c6 9 12 15 12 23a12 12 0 0 1-24 0c0-8 6-14 12-23z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>
+        <h3>Natuurwijn</h3>
+        <p>Natuurlijke gisten, niet gefilterd of geklaard, geen sulfiet toegevoegd: een pure wijn die de druif laat spreken.</p>
+      </div>
+      <div class="valeur">
+        <!-- Icône : une feuille de vigne (raisonné) -->
+        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 42V20"/><path d="M24 20c-9 0-14-6-14-14 8 0 14 5 14 14z"/><path d="M24 26c7 0 12-5 12-12-7 0-12 5-12 12z"/></svg>
+        <h3>Duurzaam</h3>
+        <p>Een wijngaard zonder chemische onkruidbestrijding, met respect voor bodem en natuur.</p>
+      </div>
+      <div class="valeur">
+        <!-- Icône : une maison (familial) -->
+        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 22 24 9l16 13"/><path d="M12 19v20h24V19"/><path d="M21 39v-9h6v9"/></svg>
+        <h3>Familiaal</h3>
+        <p>Een klein domein waar elke fles door de handen van de familie gaat, van wijnstok tot glas.</p>
+      </div>
+    </section>
+
+    <!-- 4. LE DOMAINE : photo à gauche, texte court à droite -->
+    <section id="domaine" class="duo">
+      <div class="photo" style="background-image: url('images/vignes.jpg');"></div>
+      <div class="duo-texte">
+        <p class="sur-titre">Het domein</p>
+        <h2>In Hakendover</h2>
+        <p>Dit bijzondere project begon in 2018. De wijngaard werd in 2019 aangeplant in Hakendover, bij Tienen, en beslaat een halve hectare, deels Aligoté, deels Pinot Gris.</p>
+        <p>Omringd door een dichte haag is het een afgesloten gebied, een echte "clos".</p>
+      </div>
+    </section>
+
+    <!-- 5. LES VINS : clic sur "Découvrir" → ouvre la fiche détaillée (voir plus bas) -->
+    <section id="vins" class="vins">
+      <p class="sur-titre">Onze wijnen</p>
+      <h2>Twee druivenrassen, twee wijnen</h2>
+      <div class="grille-vins">
+        <article class="vin aligote">
+          <div class="photo bouteille" style="background-image: url('images/aligote.png');"></div>
+          <h3>Aligoté</h3>
+          <p class="type">Natuurwijn</p>
+          <!-- data-fiche = l'id de la fiche à ouvrir -->
+          <button class="lien-fiche" data-fiche="fiche-aligote">Ontdek deze wijn</button>
+        </article>
+        <article class="vin pinot">
+          <div class="photo bouteille" style="background-image: url('images/pinot-gris.png');"></div>
+          <h3>Pinot Gris</h3>
+          <p class="type">Oranjewijn</p>
+          <button class="lien-fiche" data-fiche="fiche-pinot">Ontdek deze wijn</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. OFFRE DU MOMENT : à changer selon la saison -->
+    <section class="offre">
+      <div class="offre-carte">
+        <img src="images/coffret.jpg" alt="Geschenkdoos Clos Lindelauf met twee flessen en een kurkentrekker">
+        <div class="offre-texte">
+          <p class="sur-titre">Actie van het moment</p>
+          <h2>De feestdoos</h2>
+          <ul>
+            <li>1 fles Aligoté</li>
+            <li>1 fles Pinot Gris</li>
+            <li>1 sommeliersmes (kurkentrekker)</li>
+          </ul>
+          <p class="offre-prix">35 €</p>
+          <!-- data-commande = le texte qui sera pré-rempli dans le formulaire -->
+          <a href="#commande" class="bouton" data-commande="1 × Feestdoos (35 €)">Bestel de feestdoos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. GRANDE PHOTO DE RESPIRATION -->
+    <section class="bandeau" style="background-image: url('images/bandeau.jpg');">
+      <p>« Clos Lindelauf groeit stap voor stap,<br>maar het avontuur is nog maar net begonnen. »</p>
+    </section>
+
+    <!-- 8. COMMANDE -->
+    <section id="commande" class="commande">
+      <p class="sur-titre">Bestellen</p>
+      <h2>Zin in een fles?</h2>
+      <p class="intro">Laat ons weten wat u wenst, wij nemen contact met u op voor de betaling en het afhalen.</p>
+
+      <!-- On branchera Formspree plus tard : il suffira de remplacer VOTRE_ID -->
+      <form class="formulaire" action="https://formspree.io/f/VOTRE_ID" method="POST">
+        <!-- Champ caché : indique à ton ami dans quelle langue répondre -->
+        <input type="hidden" name="langue" value="NL">
+        <div class="ligne">
+          <input type="text" name="nom" placeholder="Naam en voornaam" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+        </div>
+        <input type="tel" name="telephone" placeholder="Telefoon (optioneel)">
+        <textarea id="champ-commande" name="commande" rows="4" placeholder="Uw bestelling, bv.: 6 × Aligoté, 3 × Pinot Gris" required></textarea>
+        <label class="case">
+          <input type="checkbox" name="majeur" required>
+          Ik heb de wettelijke leeftijd om alcohol te kopen.
+        </label>
+        <button type="submit" class="bouton">Versturen</button>
+      </form>
+    </section>
+
+    <!-- 9. VERKOOPPUNTEN (zie index.html voor uitleg) -->
+    <section id="revendeurs" class="revendeurs">
+      <p class="sur-titre">Verkooppunten</p>
+      <h2>Waar vindt u onze wijnen</h2>
+      <p class="intro">Onze flessen zijn ook verkrijgbaar bij deze partners.</p>
+      <div class="grille-revendeurs">
+        <article class="revendeur a-venir">
+          <h3>[Naam van de winkel]</h3>
+          <p>[Gemeente]</p>
+          <a href="#">[website]</a>
+        </article>
+        <article class="revendeur a-venir">
+          <h3>[Naam van de winkel]</h3>
+          <p>[Gemeente]</p>
+          <a href="#">[website]</a>
+        </article>
+        <article class="revendeur a-venir">
+          <h3>[Naam van de winkel]</h3>
+          <p>[Gemeente]</p>
+          <a href="#">[website]</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. NOUS TROUVER : photo + carte Google Maps -->
+    <section id="visite" class="visite">
+      <div class="visite-texte">
+        <p class="sur-titre">Ons vinden</p>
+        <h2>Tussen de wijnranken</h2>
+        <p>Clos Lindelauf ligt in Hakendover, op de grens tussen Vlaanderen en Wallonië.</p>
+        <p><a href="mailto:clos.lindelauf@gmail.com">clos.lindelauf@gmail.com</a></p>
+      </div>
+      <!-- Carte Google Maps : pour changer le lieu, modifie le texte après "q=" -->
+      <iframe class="carte" src="https://www.google.com/maps?q=Hakendover,+België&z=13&output=embed"
+              loading="lazy" title="Kaart: Hakendover" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <!-- FICHES DÉTAILLÉES DES VINS
+       <dialog> est une fenêtre qui s'ouvre par-dessus la page. Elle est cachée
+       tant que script.js ne l'ouvre pas. -->
+  <dialog id="fiche-aligote" class="fiche aligote">
+    <button class="fermer" aria-label="Sluiten">×</button>
+    <div class="fiche-photo" style="background-image: url('images/aligote.png');"></div>
+    <div class="fiche-texte">
+      <p class="sur-titre">Natuurwijn</p>
+      <h2>Aligoté</h2>
+      <dl>
+        <dt>Druivenras</dt>
+        <dd>100 % Aligoté, een witte druif uit Bourgondië, gekend om haar frisheid en levendigheid.</dd>
+        <dt>In het kort</dt>
+        <dd>75 cl · 11,5 % vol. · niet gefilterd · geen sulfiet toegevoegd</dd>
+        <dt>Vinificatie</dt>
+        <dd>Selectieve pluk en directe persing. Fermentatie in inox met eigen natuurlijke gisten. Niet gefilterd, noch geklaard en geen sulfiet toegevoegd.</dd>
+        <dt>Rijping</dt>
+        <dd>Inox.</dd>
+        <dt>Proefnotities</dt>
+        <dd>[Bv.: neus van citrus en witte bloemen, levendig en mineraal in de mond.]</dd>
+        <dt>Combinaties</dt>
+        <dd>Zeevruchten, gegrilde witte vis, garnaalkroketten, verse geitenkaas.</dd>
+        <dt>Schenktemperatuur</dt>
+        <dd>Tussen 8 en 10 °C.</dd>
+      </dl>
+      <a href="#commande" class="bouton" data-commande="Aligoté × ">Bestel deze wijn</a>
+    </div>
+  </dialog>
+
+  <dialog id="fiche-pinot" class="fiche pinot">
+    <button class="fermer" aria-label="Sluiten">×</button>
+    <div class="fiche-photo" style="background-image: url('images/pinot-gris.png');"></div>
+    <div class="fiche-texte">
+      <p class="sur-titre">Oranjewijn</p>
+      <h2>Pinot Gris</h2>
+      <dl>
+        <dt>Druivenras</dt>
+        <dd>100 % Pinot Gris, een druif met een grijsroze schil.</dd>
+        <dt>In het kort</dt>
+        <dd>75 cl · 10,5 % vol. · niet gefilterd · geen sulfiet toegevoegd</dd>
+        <dt>Wat is een oranjewijn?</dt>
+        <dd>Een wijn van witte druiven die, zoals bij rode wijn, samen met hun schil weken. Zo krijgt hij zijn amberkleur en een vollere textuur.</dd>
+        <dt>Vinificatie</dt>
+        <dd>Selectieve pluk en een week maceratie op de schillen. Fermentatie in inox met eigen natuurlijke gisten. Niet gefilterd, noch geklaard en geen sulfiet toegevoegd.</dd>
+        <dt>Rijping</dt>
+        <dd>11 maanden inox.</dd>
+        <dt>Proefnotities</dt>
+        <dd>[Bv.: tonen van geel fruit en kruiden, vol en licht tanninerijk in de mond.]</dd>
+        <dt>Combinaties</dt>
+        <dd>Gebraden gevogelte, pittige of Aziatische gerechten, champignongerechten, belegen kazen.</dd>
+        <dt>Schenktemperatuur</dt>
+        <dd>Tussen 12 en 14 °C.</dd>
+      </dl>
+      <a href="#commande" class="bouton" data-commande="Pinot Gris × ">Bestel deze wijn</a>
+    </div>
+  </dialog>
+
+  <!-- PIED DE PAGE -->
+  <footer class="pied">
+    <img src="images/logo-blanc.png" alt="Clos Lindelauf" class="logo-pied">
+    <div class="reseaux">
+      <a href="https://www.instagram.com/clos_lindelauf/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/people/Clos-Lindelauf/61569137267410/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p>Hakendover · <a href="mailto:clos.lindelauf@gmail.com">clos.lindelauf@gmail.com</a></p>
+    <p class="petit">Geniet, maar drink met mate.</p>
+  </footer>
+
+  <!-- Le JavaScript se charge en dernier, quand toute la page est prête -->
+  <script src="script.js"></script>
+</body>
+</html>
